@@ -1,39 +1,13 @@
-{
-  "nbformat": 4,
-  "nbformat_minor": 0,
-  "metadata": {
-    "colab": {
-      "provenance": [],
-      "authorship_tag": "ABX9TyPH7wYVYMC1a+rnecJHK4Sq",
-      "include_colab_link": true
-    },
-    "kernelspec": {
-      "name": "python3",
-      "display_name": "Python 3"
-    },
-    "language_info": {
-      "name": "python"
-    }
-  },
-  "cells": [
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "view-in-github",
-        "colab_type": "text"
-      },
-      "source": [
-        "<a href=\"https://colab.research.google.com/github/Algaray02/Pemrograman_Berbasis_Objek_TI-1A-05/blob/main/geometri.py\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
-      ]
-    },
-    {
-      "cell_type": "code",
-      "execution_count": null,
-      "metadata": {
-        "id": "G186xg8ofCTY"
-      },
-      "outputs": [],
-      "source": []
-    }
-  ]
-}
+# Modul geometri.py berisi fungsi terkait geometri 
+
+def hitung_luas_persegi(sisi):
+  return sisi * sisi                                                             
+                                                                                                                  
+def hitung_luas_persegi_panjang(panjang, lebar):
+  return panjang * lebar                                       
+
+def hitung_luas_lingkaran(jari_jari):
+  return 3.14 * (jari_jari ** 2)
+
+def hello_pray():
+  return "Echo hallo pray"
