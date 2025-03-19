@@ -1,0 +1,8 @@
+{
+  "editor.tabSize": 3,
+  "editor.fontSize": 14,
+  "terminal.integrated.fontSize": 14,
+  "editor.wordWrap": "on",
+  "workbench.colorTheme": "Noctis Uva",
+  "editor.minimap.autohide": false
+}
