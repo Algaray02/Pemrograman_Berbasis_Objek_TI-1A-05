@@ -8,7 +8,7 @@ class HANDPHONE:
       self.stok = stok
    
    def info_hp(self):
-      print(f'ID : {self.id}\nNama Handphone : {self.nama}\nHarga : {self.harga}\nStok : {self.stok}')
+      print(f'ID : {self.id}\nNama Handphone : {self.nama}\nHarga : {self.harga}\nStok : {self.stok}\n')
 
 
 class PEMBELIAN:
