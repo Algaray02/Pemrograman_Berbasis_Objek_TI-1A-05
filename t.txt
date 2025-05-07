@@ -1,0 +1,10 @@
+=IF(OR(
+  AND($V$9=$W$18; REGEXMATCH($Y$18; "Berlangsung|Akan Datang")); 
+  AND($V$11=$W$18; REGEXMATCH($Y$18; "Berlangsung|Akan Datang"));
+  AND($V$13=$W$18; REGEXMATCH($Y$18; "Berlangsung|Akan Datang"))
+);
+  IF($V$9=$W$18; "✓ " & $Y$9 & " (" & $W$9 & " di " & $X$9 & ")";
+  IF($V$11=$W$18; "✓ " & $Y$11 & " (" & $W$11 & " di " & $X$11 & ")";
+  IF($V$13=$W$18; "✓ " & $Y$13 & " (" & $W$13 & " di " & $X$13 & ")"; "")
+));
+"")

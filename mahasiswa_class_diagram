@@ -1,0 +1,9 @@
+// Class Diagram Mahasiswa
+digraph {
+	node [shape=record]
+	Mahasiswa [label="{Mahasiswa|+ nama: str\l+ nim: str\l+ ipk: float\l|+ __init__(nama, nim, ipk)\l+ tampilkan_info()\l+ hitung_predikat()\l}"]
+	MahasiswaSarjana [label="{MahasiswaSarjana|+ semester: int\l+ sks_lulus: int\l|+ __init__(nama, nim, ipk, semester, sks_lulus)\l+ tampilkan_info()\l+ __del__()\l}"]
+	MahasiswaMagister [label="{MahasiswaMagister|+ judul_tesis: str\l+ nama_pembimbing: str\l|+ __init__(nama, nim, ipk, judul_tesis, nama_pembimbing)\l+ hitung_predikat()\l+ tampilkan_info()\l+ __del__()\l}"]
+	Mahasiswa -> MahasiswaSarjana [arrowhead=empty]
+	Mahasiswa -> MahasiswaMagister [arrowhead=empty]
+}
