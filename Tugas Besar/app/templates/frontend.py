@@ -18,7 +18,7 @@ if 'transaksi_selesai' not in st.session_state:
    st.session_state.transaksi_selesai = False
 
 def login_page():
-    st.title("Kasir Muladi 🧾")
+    st.title("Kasir Restoran 🧾")
 
     nama = st.text_input("Masukkan Nama Anda")
     if nama == "admin":
@@ -43,9 +43,7 @@ def admin_page():
         st.write(f"Selamat datang, {st.session_state.get('user', 'Admin')}!")
     
     with col2:
-        # Tombol untuk kembali ke halaman login
         if st.button("⬅️ Kembali", use_container_width=True):
-            # Hapus state user saat kembali ke login untuk sesi yang bersih
             if 'user' in st.session_state:
                 del st.session_state['user']
             st.session_state.current_page = "login"
@@ -122,7 +120,7 @@ def admin_page():
                 if res.ok:
                     st.success("Berhasil ditambahkan!")
                     st.rerun()
-                else: # Gagal
+                else:
                     st.error(f"Terjadi kesalahan. Status Code: {res.status_code}")
                     # Tampilkan pesan error dari FastAPI
                     st.json(res.json())
@@ -223,7 +221,7 @@ def dashboard_user_page():
                         "harga_satuan": item["harga"]
                     })
                     st.session_state.last_added = item["nama"]
-                    st.rerun()
+                    st.rerun() 
 
     if st.button("Lanjut ke Transaksi"):
         st.session_state.current_page = 'transaksi'
@@ -242,6 +240,7 @@ def transaksi_page():
     if "user" not in st.session_state:
         st.session_state.user = ''
 
+    # bagian transaksi selesai
     if st.session_state.transaksi_selesai:
         st.success("Transaksi berhasil!")
         
@@ -262,7 +261,7 @@ def transaksi_page():
             st.rerun()
         return
 
-    # --- Bagian 2: Proses Transaksi ---
+    # bagian list transaksi
     keranjang = st.session_state.keranjang
     if not keranjang:
         st.warning("Keranjang belanja masih kosong.")
